@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas - Bienvenidos</title>
+</head>
+<div align='center'>
+    <h1>Desarrollo Videojuegos</h1>
+    <a href="invasores.html">OSOS INVASORES</a>
+</div>
+<div  align="center">
+    <canvas width="800" height="500" id="lienzo" style="border:3px solid #000000;"></canvas>
+    <script>
+        var cv, cx, objetos, objetoActual = null;
+
+        var miImagen = new Image();
+            miImagen.src = "./imagenes/moni.jpg"
+        function actualizar() {
+            var degradado = cx.createLinearGradient(0,150,500,150);
+            degradado.addColorStop(0,"red");
+            degradado.addColorStop(1,"blue");
+            cx.fillStyle= degradado;
+            cx.fillRect(0, 0, 800, 500);
+            //Recorrer objetos
+            for (var i = 0; i < objetos.length; i++) {
+                cx.fillStyle = objetos[i].color;
+                cx.fillRect(objetos[i].x, objetos[i].y, objetos[i].width, objetos[i].height);
+            }
+            cx.drawImage(miImagen, 80, 150);
+        }
+
+        window.onload = function () {
+            objetos = [];
+            cv = document.getElementById('lienzo');
+            cx = cv.getContext('2d');
+            // Agregar objetos y formar el nombre
+            objetos.push({
+                x: 0, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 20, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 30, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 45, y: 0,
+                width: 30, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 65, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 90, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 110, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 110, y: 60,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 130, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 160, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 180, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 200, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 230, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 260, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 280, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 280, y: 60,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 310, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 330, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 330, y: 30,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 340, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 380, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 400, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 400, y: 60,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 430, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 450, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 450, y: 30,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 460, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 490, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 500, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 520, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 530, y: 0,
+                width: 30, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 550, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 580, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 600, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 600, y: 30,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 610, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 640, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 660, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            objetos.push({
+                x: 660, y: 60,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 690, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 700, y: 30,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 720, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 750, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 760, y: 0,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+
+            objetos.push({
+                x: 780, y: 0,
+                width: 20, height: 80,
+                color: '#dfd78c'
+            });
+            
+            objetos.push({
+                x: 760, y: 60,
+                width: 20, height: 20,
+                color: '#dfd78c'
+            });
+            actualizar();
+        }
+    </script>
+</div>
+
+<body>
+</body>
+
+</html>
